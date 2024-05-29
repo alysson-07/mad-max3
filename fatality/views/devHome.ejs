@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home do Desenvolvedor</title>
+    <link rel="stylesheet" type="text/css" href="/css/devs.css">
+</head>
+<body>
+    <div class="dev-home">
+        <h1>Bem-vindo, <%= dev.nome %></h1>
+        <p>Este é o painel do desenvolvedor.</p>
+        <ul class="ul_home">
+            <li class="li_home"><a class="home-link" href="/dev/usuarios/create">Criar Usuário</a></li>
+            <li class="li_home"><a class="home-link" href="/dev/cavaleiros/create">Criar Cavaleiro</a></li>
+            <li class="li_home"><a class="home-link" href="/dev/perguntas/create">Criar Pergunta</a></li>
+            <li class="li_home"><a class="home-link" href="/dev/alternativas/create">Criar Alternativa</a></li>
+        </ul>
+        <a class="logout-link" href="/dev/logout">Logout</a>
+    </div>
+</body>
+</html>

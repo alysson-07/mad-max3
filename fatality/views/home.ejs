@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+    <div class="boxtitle">
+        <h1 class="h1_home">Welcome to Home Page</h1>
+    </div>
+    <div class="container_home">
+        <% cavaleiros.forEach(cavaleiro=> { %>
+        <div class="cavaleiro">
+            <img src="/uploads/<%= cavaleiro.imagem_url %>" alt="<%= cavaleiro.nome %>">
+            <h2><%= cavaleiro.nome %> de <%= cavaleiro.constelacao %></h2>
+            <p><%= cavaleiro.descricao %></p>
+        </div>
+        <% }); %>
+    </div>
+    <div class="button-container">
+        <a href="/quiz" class="btn-quiz">Take Quiz</a>
+        <a href="/logout" class="btn-quiz">Logout</a>
+    </div>
+</body>
+
+</html>

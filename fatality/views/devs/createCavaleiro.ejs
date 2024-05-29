@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastro de Cavaleiro</title>
+    <link rel="stylesheet" type="text/css" href="/css/devs.css">
+</head>
+<body>
+    <a href="/dev/home" class="back-button">Voltar</a>
+    <div class="form-container">
+        <h1 class="page-title">Cadastro de Cavaleiro</h1>
+        <form action="/dev/cavaleiros/create" method="post" enctype="multipart/form-data">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="constelacao">Constelação:</label>
+            <input type="text" id="constelacao" name="constelacao" required>
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" name="descricao" required></textarea>
+            <label for="imagem">Imagem:</label>
+            <input type="file" id="imagem" name="imagem" accept="image/*">
+            <button type="submit">Cadastrar Cavaleiro</button>
+        </form>
+        <h2>Cavaleiros Cadastrados:</h2>
+        <ul>
+            <% cavaleiros.forEach(function(cavaleiro) { %>
+                <li>
+                    <%= cavaleiro.nome %>
+                    <div class="button-group">
+                        <form action="/dev/cavaleiros/<%= cavaleiro.id %>" method="post">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit">Remover</button>
+                        </form>
+                        <form action="/dev/cavaleiros/<%= cavaleiro.id %>/edit" method="get">
+                            <button type="submit">Editar</button>
+                        </form>
+                    </div>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+</body>
+</html>

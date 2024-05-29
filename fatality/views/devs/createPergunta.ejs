@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastro de Pergunta</title>
+    <link rel="stylesheet" type="text/css" href="/css/devs.css">
+</head>
+<body>
+    <a href="/dev/home" class="back-button">Voltar</a>
+    <div class="form-container">
+        <h1 class="page-title">Cadastro de Pergunta</h1>
+        <form action="/dev/perguntas" method="post" class="input-group">
+            <textarea name="descricao" placeholder="Descrição da Pergunta" required></textarea>
+            <button type="submit" class="button-submit">Cadastrar</button>
+        </form>
+        <h2>Perguntas Cadastradas:</h2>
+        <ul>
+            <% perguntas.forEach(function(pergunta) { %>
+                <li>
+                    <%= pergunta.descricao %>
+                    <div class="button-group">
+                        <form action="/dev/perguntas/<%= pergunta.id %>" method="post">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit">Remover</button>
+                        </form>
+                        <form action="/dev/perguntas/<%= pergunta.id %>/edit" method="get">
+                            <button type="submit">Editar</button>
+                        </form>
+                    </div>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+</body>
+</html>

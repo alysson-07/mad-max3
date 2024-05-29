@@ -1,0 +1,538 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #EAE8DC;
+    display: flex;
+    align-items: center;
+    color: #333;
+    line-height: 1.6;
+    flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.h1_home {
+    font-size: 40px;
+    margin-top: 4.5%;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #342b83;
+}
+
+.container-log {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 30%;
+    background-color: #5449B5;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12%;
+}
+
+form,
+.boxf {
+    margin-bottom: 15px;
+}
+
+.quiz-form {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.next {
+    width: 50%;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 4% 5%;
+    font-weight: 700;
+    background: #EAE8DC;
+    color: blueviolet;
+    border-radius: .5rem;
+    border-bottom: 2px solid blueviolet;
+    border-right: 2px solid blueviolet;
+    border-top: 1px solid blueviolet;
+    border-left: 1px solid blueviolet;
+    transition-duration: 1s;
+    transition-property: border-top, 
+       border-left, 
+       border-bottom,
+       border-right,
+       box-shadow;
+   }
+   
+   .next:hover {
+    border-top: 2px solid blueviolet;
+    border-left: 2px solid blueviolet;
+    border-bottom: 2px solid rgb(238, 103, 238);
+    border-right: 2px solid rgb(238, 103, 238);
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px;
+   }
+
+label.log {
+    display: block;
+    margin-bottom: 5px;
+    color: #EAE8DC;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: none;
+    background-color: #EAE8DC;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #5449B5;
+    color: #EAE8DC;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    font-size: 18px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 100px;
+    width: 60%;
+    position: absolute;
+    left: 20%;
+    transition: background-color 0.3s;
+}
+
+button:hover,
+button:focus {
+    background-color: #463ca5;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-quiz {
+    border: 2px solid #2D237C;
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    margin-bottom: 10%;
+    font-size: 27px;
+    font-weight: bold;
+    background-color: #EAE8DC;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-quiz:hover {
+    background-color: #2D237C;
+    color: #EAE8DC;
+}
+
+.seta {
+    color: #000000;
+    position: fixed;
+    top: -10px;
+    left: 10px;
+}
+
+.pergunta {
+    margin-top: 15%;
+}
+
+.container_home {
+    display: flex;
+    width: 90%;
+    margin: 0% 5%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cavaleiro_result{
+
+    margin-top: 10%;
+    flex: 1 1 calc(33.333% - 20px);
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background: #fff;
+    text-align: center;
+
+}
+
+.cavaleiro {
+    flex: 1 1 calc(33.333% - 20px);
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background: #fff;
+    text-align: center;
+}
+
+.bdy_index {
+
+    background-image: url(../images/backgorund.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.btn-index {
+  padding: 17px 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 0;
+  border: 1px solid darkblue;
+  background-color: #EAE8DC;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+}
+
+.btn-index:hover {
+  letter-spacing: 3px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+
+.btn-index:active {
+  letter-spacing: 3px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
+
+.container_index {
+
+    width: 50%;
+    height: 300px;
+    margin-top: 18%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.cavaleiro img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 10px;
+}
+
+.cavaleiro h2 {
+    color: #5449B5;
+    font-size: 22px;
+}
+
+.cavaleiro p {
+    color: #666;
+    font-size: 16px;
+}
+
+.form-container {
+    margin: 40px auto;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    color: #EAE8DC;
+}
+
+.button-submit {
+    background-color: #28a745;
+}
+
+.button-submit:hover {
+    background-color: #218838;
+}
+
+.page-title {
+    font-size: 26px;
+}
+
+.dev-login-form {
+    background-color: #e3f2fd;
+    border: 1px solid #90caf9;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.dev-login-form label,
+.dev-login-form input,
+.dev-login-form button {
+    font-size: 16px;
+}
+
+.dev-login-form button {
+    background-color: #5449B5;
+    color: white;
+}
+
+.dev-login-form button:hover {
+    background-color: #5449B5;
+}
+
+.bt-login {
+    margin-top: 27%;
+}
+
+.bt-login button {
+    border-radius: 12px;
+}
+
+.register-button {
+    background-color: #28a745;
+    color: #EAE8DC;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    font-size: 18px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.register-button:hover,
+.register-button:focus {
+    background-color: #218838;
+}
+
+@media (max-width: 1024px) {
+    body {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        background-color: #EAE8DC;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #333;
+        line-height: 1.6;
+        flex-direction: column;
+    }
+
+    .container_home {
+       display: block;
+    }
+
+    .container-log {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 45%;
+        background-color: #5449B5;
+        padding: 30px;
+        border-radius: 0px 0px 30px 30px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -10px;
+    }
+
+    button {
+        background-color: #5449B5;
+        color: #EAE8DC;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-top: 100px;
+        width: 60%;
+        position: absolute;
+        left: 20%;
+    }
+
+    .seta {
+        color: #EAE8DC;
+    }
+
+    .cavaleiro {
+        width: 90%;
+        margin: 0 auto 20px;
+    }
+
+    .cavaleiro img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .cavaleiro h2 {
+        font-size: 18px;
+    }
+
+    .cavaleiro p {
+        font-size: 14px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5px;
+        width: 200px;
+    }
+
+    .btn-quiz {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    .btn-quiz {
+        width: 200px;
+        font-size: 30px !important;
+        margin-bottom: 10%;
+        margin-top: 5%;
+        height: 70px;
+        font-size: 40px;
+    }
+
+    h1{
+        text-align: center;
+        margin: 2% 0%;
+        width: 100%;
+        font-size: 40px;
+        color: #463ca5;
+    }
+
+    h1.perg{
+        text-align: center;
+        margin: 2% 0%;
+        font-size: 25px;
+        color: #EAE8DC;
+    }
+
+
+    .h1_home {
+        font-size: 60px;
+    }
+
+    .pergunta {
+        background-color: #463ca5;
+        width: 450px;
+        height: 300px;
+        border-radius: 10px;
+        margin: 5% 0px 7%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .opicao {
+        background-color: #463ca5;
+        color: #EAE8DC;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        display: inline-flex;
+        align-items: center;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    .resp {
+        background-color: white;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    .next {
+        width: 10%;
+        margin-left: 25%;
+    }
+
+    .container_index {
+
+        width: 50%;
+        height: 300px;
+        margin-top: 70%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    
+    }
+
+    .cavaleiro_result{
+
+        margin-top: 10%;
+        flex: 1 1 calc(33.333% - 20px);
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        background: #fff;
+        text-align: center;
+        width: 80%;
+        height: 600px;
+    
+    }
+
+    .cavaleiro_result img{
+        width: 100%;
+        height: 100%;
+    }
+}
+

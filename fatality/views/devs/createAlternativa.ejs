@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastro de Alternativa</title>
+    <link rel="stylesheet" type="text/css" href="/css/devs.css">
+</head>
+<body>
+    <a href="/dev/home" class="back-button">Voltar</a>
+    <div class="form-container">
+        <h1 class="page-title">Cadastro de Alternativa</h1>
+        <form action="/dev/alternativas" method="post" class="input-group">
+            <input type="number" name="pergunta_id" placeholder="ID da Pergunta" required>
+            <input type="text" name="texto" placeholder="Texto da Alternativa" required>
+            <button type="submit" class="button-submit">Cadastrar</button>
+        </form>
+        <h2>Alternativas Cadastradas:</h2>
+        <ul>
+            <% alternativas.forEach(function(alternativa) { %>
+                <li>
+                    <%= alternativa.texto %>
+                    <div class="button-group">
+                        <form action="/dev/alternativas/<%= alternativa.id %>" method="post">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit">Remover</button>
+                        </form>
+                        <form action="/dev/alternativas/<%= alternativa.id %>/edit" method="get">
+                            <button type="submit">Editar</button>
+                        </form>
+                    </div>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+</body>
+</html>

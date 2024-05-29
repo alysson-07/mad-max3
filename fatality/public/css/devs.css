@@ -1,0 +1,240 @@
+/* styles.css */
+
+/* Corpo geral da página */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    position: relative; /* Allow positioning of the back button */
+}
+
+/* Botão de Voltar */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #6200ea;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #3700b3;
+}
+
+/* Container do formulário */
+.form-container {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Título da página */
+.page-title {
+    margin-bottom: 20px;
+}
+
+/* Grupo de input */
+.input-group, form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilização dos campos de input */
+.input-group input, 
+input[type="text"], 
+input[type="number"], 
+input[type="email"], 
+input[type="password"], 
+textarea, 
+button {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+/* Botão */
+button {
+    cursor: pointer;
+    background-color: #6200ea;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3700b3;
+}
+
+/* Lista sem estilo */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Item da lista */
+ul li {
+    background-color: #333;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Formulários dentro da lista */
+ul li form {
+    display: inline;
+}
+
+/* Grupo de botões */
+ul li .button-group {
+    display: flex;
+    gap: 10px; /* Espaço entre os botões */
+}
+
+/* Botões dentro da lista */
+ul li button {
+    background-color: #bb86fc;
+    padding: 5px 10px;
+}
+
+ul li button:hover {
+    background-color: #3700b3;
+}
+
+/* Home do Desenvolvedor */
+.dev-home {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dev-home h1 {
+    margin-bottom: 20px;
+}
+
+.dev-home p {
+    margin-bottom: 30px;
+}
+
+.dev-home ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.dev-home ul li {
+    list-style: none;
+}
+
+.dev-home .home-link {
+    display: block;
+    background-color: #424242;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    text-align: center;
+    width: 100%;
+}
+
+.dev-home .home-link:hover {
+    background-color: #bb86fc;
+}
+
+.dev-home .logout-link {
+    display: block;
+    margin-top: 20px;
+    background-color: #bb86fc;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+}
+
+.dev-home .logout-link:hover {
+    background-color: #3700b3;
+}
+
+/* Login do Desenvolvedor */
+.dev-login-form {
+    width: 80%;
+    max-width: 500px;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.ul_home {
+    list-style: none;
+    padding: 0;
+    width: 80%;
+}
+
+/* Item da lista */
+.li_home {
+    background-color: #906fa0;
+    margin: 5px 0;
+    padding: 1px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Formulários dentro da lista */
+.li_home form {
+    display: inline;
+}
+
+.li_home .button-group {
+    display: flex;
+    gap: 10px; /* Espaço entre os botões */
+}
+
+/* Botões dentro da lista */
+.li_home button {
+    background-color: #bb86fc;
+    padding: 5px 10px;
+}
+
+.li_home button:hover {
+    background-color: #3700b3;
+}

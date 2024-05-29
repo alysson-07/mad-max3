@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Page</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+    <div class="pergunta">
+        <h1 class="perg"><%= question.question %></h1>
+    </div>
+    <form method="POST" action="/quiz" class="quiz-form">
+        <% question.options.forEach(option => { %>
+            <label class="opicao">
+                <input type="radio" name="selectedOption" value="<%= option.id %>" class="resp" required>
+                <%= option.texto %>
+            </label><br>
+        <% }); %>
+        <button type="submit" class="next">Next</button>
+    </form>
+</body>
+</html>
